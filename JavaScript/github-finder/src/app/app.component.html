@@ -1,0 +1,11 @@
+<div class="finder">
+  <h1>Find GitHub User</h1>
+  <app-pseudo-search (onSearch)="searchUser($event)"></app-pseudo-search>
+</div>
+<app-user-card *ngIf="githubUser" [user]="githubUser"></app-user-card>
+
+<div class="center" *ngIf="showError">
+  <div class="card">
+    <h1>No hay usuarios que cumplan con el criterio de búsqueda</h1>
+  </div>
+</div>
